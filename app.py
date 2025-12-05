@@ -28,6 +28,7 @@ def predict_api():
     # Convert numpy type to Python float
     return jsonify({"prediction": float(output)})
 
+
 @app.route("/predict", methods=["POST"])
 def predict():
     data = [float(x) for x in request.form.values()]
